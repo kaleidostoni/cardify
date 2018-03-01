@@ -9,6 +9,7 @@ const myGallery = htmlElement =>{
  //volviendo la colección de html en arreglo
  const photoArray = Array.from(photos);
 console.log(photoArray);
+gallery.innerHTML = "";
 //iterando en los elementos del array para colocarlos dentro de su etiqueta figure
 photoArray.map(function(photo){
 const image = document.createElement('img');
@@ -16,6 +17,7 @@ const figure = document.createElement('figure');
 const figCapt = document.createElement('figcaption');
 
 image.src = photo.src;
+
 figCapt.innerHTML= photo.alt;
 
 figure.appendChild(image);
